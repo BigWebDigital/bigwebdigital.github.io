@@ -120,7 +120,7 @@ $(window).on('scroll', function() {
 
 $(function() {
 	$(window).on("scroll", function() {
-		if($(window).scrollTop() > 200) {
+		if($(window).scrollTop() > 100) {
 			$("header").addClass("active-scroll");
 		} else {
 			//remove the background so it becomes transparent again
