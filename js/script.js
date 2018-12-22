@@ -91,8 +91,6 @@ $(window).on('scroll', function() {
 	});
 });
 
-
-
 /*****
 var sections = $('section'), 
 nav = $('nav'), 
