@@ -35,7 +35,7 @@ h2 a:hover {
 	color: orange;
 }
 
-#we {
+.we {
 	color: orange;
 	font-weight: 600;
 }
@@ -124,7 +124,7 @@ section p {
 
 /*Nav Highlighting While Scrolling*/
 .active-link {
-	padding: 6px 12px;
+	padding: 8px 14px;
 	animation: border 1.5s;
 	animation-fill-mode: forwards;
 }
