@@ -16,6 +16,46 @@ body {
 	position: relative;
 }
 
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 550px;
+  top: 250px;
+  justify-content: center;
+  z-index: 1;
+  animation: load 1.3s linear infinite;
+  filter: grayscale(100);
+}
+
+@keyframes load {
+	0% {
+		transform: rotateY(180deg);
+	}
+	50% {
+		transform: rotateY(-180deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+@media (max-width: 800px) {
+	#loader {
+		top: 250px;
+		left: 90px;
+	}
+}
+
+#site {
+  display: none;
+}
+
+#loadertext {
+	position: relative;
+	top: 100px;
+}
+/*Loader*/
+
 ul,
 nav {
 	list-style: none;
@@ -35,13 +75,13 @@ h2 a:hover {
 	color: orange;
 }
 
+.logo {
+	margin: 0;
+}
+
 .we {
 	color: orange;
 	font-weight: 600;
-}
-
-a:hover span {
-	color: white;
 }
 
 a.btn {
@@ -147,6 +187,36 @@ section p {
 	}
 }
 
+#logo {
+	animation: rotate 25s infinite;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateY(360deg);
+	}
+	2% {
+		transform: rotateY(-180deg);
+	}
+	4% {
+		transform: rotateY(360deg);
+	}
+	6% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+/*Logo Size Change*/
+
+.logo-change {
+	width: 40px;
+	height: 40px;
+	transition: 0.4s ease-out 0.6s;
+}
+
 /*Header Background Toggle*/
 
 .active-scroll {
@@ -171,7 +241,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 30px 100px 50px;
+	padding: 30px 100px 30px;
 	animation: 1s fadein 0.5s forwards;
 	opacity: 0;
 	color: #fff;
@@ -186,12 +256,8 @@ header {
 
 header h2 {
 	font-family: "Quicksand", sans-serif;
-	right: 5px;
 }
 
-header span {
-	color: orange;
-}
 
 header nav {
 	display: flex;
@@ -688,6 +754,7 @@ form .btn:active {
 @media (max-width: 600px) {
 	form .btn {
 		width: 300px;
+		align-items: center;
 	}
 }
 

@@ -1,3 +1,4 @@
+
 /*Typewriter Effect*/
 
 var TxtType = function(el, toRotate, period) {
@@ -23,7 +24,7 @@ var TxtType = function(el, toRotate, period) {
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
         var that = this;
-        var delta = 200 - Math.random() * 100;
+        var delta = 120 - Math.random() * 100;
 
         if (this.isDeleting) { delta /= 2; }
 
@@ -33,7 +34,7 @@ var TxtType = function(el, toRotate, period) {
         } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500;
+        delta = 1500;
         }
 
         setTimeout(function() {
@@ -91,41 +92,26 @@ $(window).on('scroll', function() {
 	});
 });
 
-/*****
-var sections = $('section'), 
-nav = $('nav'), 
-nav_height = nav.outerHeight();
-
-$(window).on('scroll', function() {
-	var cur_pos = $(this).scrollTop();
-
-	sections.each(function() {
-		var top = $(this).offset().top - nav_height,
-			bottom = top + $(this).outerHeight();
-
-		if (cur_pos >= top && cur_pos <= bottom) {
-			nav.find('a').removeClass('active-link');
-			sections.removeClass('active-link');
-
-			$(this).addClass('active-link');
-			nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active-link')
-		}
-	});
-});
-*****/
 
 /*Background Colour Toggle*/
 
-$(function() {
-	$(window).on("scroll", function() {
+$(document).ready(function sticky_nav() {
+    sticky_nav();
+});
+
+	$(window).on("scroll", function sticky_nav() {
 		if($(window).scrollTop() > 100) {
 			$("header").addClass("active-scroll");
-		} else {
+            $("#logo").addClass("logo-change");
+            $("#company-name").hide();
+            } else {
 			//remove the background so it becomes transparent again
 			$("header").removeClass("active-scroll");
+            $("#logo").removeClass("logo-change");
+            $("#company-name").show();
 		}
 	});
-});
+
 
 /*Menu Bars Toggle*/
 

@@ -5,16 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Big Web Digital - Stunning Websites, Mobile Apps, Online Marketing and Branding</title>
 	<!--CSS STYLES-->
-	<link rel="icon" href="img/favicon2.png" type="image/png" sizes="32x32">
+	<link rel="icon" href="img/Logo.png" type="image/png" sizes="32x32">
 	<link href="https://fonts.google.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.google.com/css?family=Quicksand" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="loader.js"></script>
 </head>
-<body>
+<body onload="myLoader()" style="margin:0;">
+	<h2 id="loadertext" style="text-align: center">Big Web is coming to you...</h2>
+
+<div id="loader"><img src="img/Logo.png" width="200px" height="200px"></div>
+
+<div id="site">
+
 	<header>
-		<h2><a href="#"><span>&lt;</span>Big Web<span>&gt;</span> Digital</a></h2>
+		<a href="#home"><img id="logo" src="img/Logo.png" alt="logo" width="55px" height="55px"><div id="company-name"><h2></a></h2></div>
 		<nav id="navbar">
 			<li class="home"><a class="default" href="#home">Home</a></li>
 			<li class="services"><a href="#service">Services</a></li>
@@ -38,10 +45,10 @@
 	<section id="home" class="hero bg_color">
 		<div class="background-image" style="background-image: url(img/main-bg.jpg);"></div>
 		<div class="hero-content-area">
-			<h1>Start<span class="we">.</span> Something<span class="we">.</span></h1>
+			<h1>BIG WEB<span class="we">.</span> Digital<span class="we">.</span></h1>
 			<!--<h3>Beautiful, Intuitive Websites for the Modern Business</h3>-->
 			<h3><span class="we">We</span>
- 				<a href="" class="typewrite" data-period="2000" data-type='[" Craft World-Class Digital Experiences.", " Design Stunning, Intuitive and Responsive Websites.", " Are Designers.", " Are Developers.", " Are Digital Strategists.", " Are Big Web Digital."]'>
+ 				<a href="" class="typewrite" data-period="2000" data-type='[" Craft World-Class Digital Experiences ", " Design Stunning, Intuitive and Responsive Websites ", " Are Designers ", " Are Developers ", " Are Digital Strategists ", " Are Big Web Digital "]'>
    				 <span class="wrap"></span>
   				</a>
 			</h3>
@@ -169,7 +176,7 @@
 			<li><a href="instragram.com/bigwebdigital"><i class="fa fa-instagram fa-2x"></i></a></li>
 		</ul>
 	</footer>
-	
+	</div>
 <script src="js/script.js"></script>
 </body>
 </html>
