@@ -16,46 +16,6 @@ body {
 	position: relative;
 }
 
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 550px;
-  top: 250px;
-  justify-content: center;
-  z-index: 1;
-  animation: load 1.3s linear infinite;
-  filter: grayscale(100);
-}
-
-@keyframes load {
-	0% {
-		transform: rotateY(180deg);
-	}
-	50% {
-		transform: rotateY(-180deg);
-	}
-	100% {
-		transform: rotateY(360deg);
-	}
-}
-
-@media (max-width: 800px) {
-	#loader {
-		top: 250px;
-		left: 90px;
-	}
-}
-
-#site {
-  display: none;
-}
-
-#loadertext {
-	position: relative;
-	top: 100px;
-}
-/*Loader*/
-
 ul,
 nav {
 	list-style: none;
